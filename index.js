@@ -1,5 +1,24 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  //Reversing a string using Built-In Functions:
+  const stringArray = word.split("")
+  const reverseArray = stringArray.reverse()
+
+  const joinArray = reverseArray.join("")
+
+  if(word === joinArray) return true
+
+  else return false
+
+  //Decrementing For Loop solution:
+  let newString = ""
+  for(let i = word.length - 1; i >= 0; i--) {
+    newString += word[i]
+  }
+
+  if (newString === word) {
+    return true
+  }
+  else return false
 }
 
 /* 
